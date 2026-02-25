@@ -105,7 +105,7 @@ See [docs/CHANGELOG.md](docs/CHANGELOG.md) for a running log of significant chan
 
 All content, frameworks, and systems in this repository are the intellectual property of Timothy E. Reed and associated entities. Unauthorized reproduction or distribution is prohibited.
 
-For questions or collaboration inquiries: [your preferred contact method]
+For questions or collaboration inquiries: tim.reed@isz.one
 
 ---
 
