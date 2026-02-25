@@ -15,7 +15,7 @@ Signals Engine is the backend infrastructure that powers the Northern Signal con
 - **The Reed Group** — Consulting and governance advisory
 - **ISZ Press** — Publishing imprint for *Signals in the Noise* and future titles
 
-This is a private working repository. It is not a public product. It documents operational systems, preserves institutional knowledge, and provides version-controlled recovery paths for all critical automations.
+This is a public working repository. It is not a public product. It documents operational systems, preserves institutional knowledge, and provides version-controlled recovery paths for all critical automations.
 
 ---
 
