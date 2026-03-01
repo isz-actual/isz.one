@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Security Assessment Platform - Ice Station Zebra</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <a href="index.html" class="logo-link">
+          <img src="assets/images/logo.png" alt="Ice Station Zebra" class="logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="process.html" class="nav-link">How It Works</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="assessment.html" class="nav-link active">Assessment</a></li>
+        <li><a href="custom-order.html" class="nav-link cta-link">Custom Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Landing Section (shown before assessment starts) -->
+  <div id="assessment-landing">
+    <!-- Hero -->
+    <section class="hero" style="padding: 80px 0;">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Security Assessment Platform</h1>
+          <p class="tagline">Physical Security & AI Governance</p>
+          <p class="hero-description">Conduct systematic facility security surveys, identify vulnerabilities, calculate risk scores, and generate professional assessment reports — all from your browser.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary btn-large" onclick="AssessmentApp.start()">Start New Assessment</button>
+            <button class="btn btn-secondary" onclick="AssessmentApp.loadSaved()">Resume Saved Assessment</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="coin-placeholder" style="animation: none;">
+            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="150" cy="150" r="140" fill="none" stroke="#D4AF37" stroke-width="2"/>
+              <circle cx="150" cy="150" r="130" fill="none" stroke="#0052CC" stroke-width="1"/>
+              <!-- Shield icon -->
+              <path d="M150 60 L210 95 L210 165 C210 210 150 245 150 245 C150 245 90 210 90 165 L90 95 Z" fill="none" stroke="#D4AF37" stroke-width="3"/>
+              <path d="M150 85 L195 110 L195 160 C195 195 150 220 150 220 C150 220 105 195 105 160 L105 110 Z" fill="rgba(0,82,204,0.3)" stroke="none"/>
+              <!-- Checkmark -->
+              <polyline points="125,155 143,173 178,128" fill="none" stroke="#D4AF37" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section style="padding: 80px 0; background: var(--card-bg);">
+      <div class="container">
+        <h2 style="text-align: center;">How It Works</h2>
+        <div class="process-timeline">
+          <div class="process-step">
+            <div class="process-number">1</div>
+            <div class="process-content">
+              <h3>Configure Your Assessment</h3>
+              <p>Enter project and facility details, then select which security modules to include. Choose from 8 physical security domains plus our exclusive AI Governance & Security module.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">2</div>
+            <div class="process-content">
+              <h3>Survey & Document</h3>
+              <p>Work through each module systematically. Rate current controls, identify vulnerabilities from expert-curated checklists, and document findings with detailed notes. Your progress saves automatically.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">3</div>
+            <div class="process-content">
+              <h3>Analyze Risk</h3>
+              <p>The platform calculates risk scores using a Likelihood x Impact methodology weighted against current control effectiveness. Review your risk matrix and prioritize findings.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-number">4</div>
+            <div class="process-content">
+              <h3>Generate Your Report</h3>
+              <p>Produce a comprehensive assessment report with executive summary, module-by-module findings, risk heat map, and prioritized recommendations. Print or save as PDF directly from your browser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assessment Modules -->
+    <section style="padding: 80px 0;">
+      <div class="container">
+        <h2 style="text-align: center;">Assessment Modules</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Nine expert-designed modules covering every dimension of physical security and AI governance. Select the modules relevant to your facility.</p>
+        <div class="coin-grid">
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="4" y="20" width="40" height="4" rx="2" fill="#D4AF37"/><rect x="8" y="12" width="4" height="24" rx="1" fill="#1E90FF"/><rect x="20" y="8" width="4" height="28" rx="1" fill="#1E90FF"/><rect x="36" y="12" width="4" height="24" rx="1" fill="#1E90FF"/></svg>
+            </div>
+            <h3>Perimeter Security</h3>
+            <p>Fencing, barriers, gates, natural surveillance, and perimeter lighting assessment.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="14" y="4" width="20" height="30" rx="3" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="24" cy="20" r="5" fill="none" stroke="#1E90FF" stroke-width="2"/><rect x="18" y="34" width="12" height="10" rx="1" fill="#1E90FF"/></svg>
+            </div>
+            <h3>Access Control</h3>
+            <p>Entry points, electronic systems, key management, visitor control, and service entries.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="18" r="10" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="24" cy="18" r="4" fill="#1E90FF"/><path d="M14 28 L10 44 L38 44 L34 28" fill="none" stroke="#1E90FF" stroke-width="2"/></svg>
+            </div>
+            <h3>Surveillance & Monitoring</h3>
+            <p>CCTV coverage, camera quality, recording systems, monitoring, and analytics.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 6 L24 16" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="8" fill="none" stroke="#D4AF37" stroke-width="2"/><circle cx="24" cy="24" r="3" fill="#1E90FF"/><path d="M12 12 L16 16 M36 12 L32 16 M12 36 L16 32 M36 36 L32 32" stroke="#1E90FF" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Lighting</h3>
+            <p>Exterior, interior, parking, emergency lighting, and maintenance programs.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 8 L28 16 L36 16 L30 22 L32 30 L24 26 L16 30 L18 22 L12 16 L20 16 Z" fill="none" stroke="#D4AF37" stroke-width="2"/><path d="M10 36 L38 36" stroke="#1E90FF" stroke-width="2" stroke-linecap="round"/><path d="M14 40 L34 40" stroke="#1E90FF" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Alarm & Detection</h3>
+            <p>Intrusion detection, fire systems, panic alarms, environmental monitoring.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><rect x="8" y="14" width="32" height="24" rx="2" fill="none" stroke="#D4AF37" stroke-width="2"/><path d="M8 20 L40 20" stroke="#1E90FF" stroke-width="1"/><circle cx="24" cy="28" r="4" fill="none" stroke="#1E90FF" stroke-width="2"/><path d="M20 10 L20 14 M28 10 L28 14" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Interior Security</h3>
+            <p>Sensitive areas, server rooms, safes, office security, and restricted zones.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="14" r="8" fill="none" stroke="#D4AF37" stroke-width="2"/><path d="M10 38 C10 28 18 24 24 24 C30 24 38 28 38 38" fill="none" stroke="#1E90FF" stroke-width="2"/><path d="M30 12 L36 6" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Security Personnel</h3>
+            <p>Guard deployment, training, patrols, communications, and incident response.</p>
+          </div>
+          <div class="coin-card assess-module-card">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><path d="M24 4 L24 12 M24 36 L24 44 M4 24 L12 24 M36 24 L44 24" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="12" fill="none" stroke="#1E90FF" stroke-width="2"/><path d="M18 24 L22 28 L30 20" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Emergency Preparedness</h3>
+            <p>Action plans, evacuation, business continuity, crisis communication, drills.</p>
+          </div>
+          <div class="coin-card assess-module-card" style="border-color: var(--accent-gold); box-shadow: 0 0 20px rgba(212,175,55,0.15);">
+            <div class="assess-module-icon">
+              <svg viewBox="0 0 48 48" width="48" height="48"><circle cx="24" cy="20" r="10" fill="none" stroke="#D4AF37" stroke-width="2"/><path d="M20 18 L24 14 L28 18" fill="none" stroke="#D4AF37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 14 L24 26" stroke="#D4AF37" stroke-width="2" stroke-linecap="round"/><path d="M14 32 L20 28 M34 32 L28 28" stroke="#1E90FF" stroke-width="2" stroke-linecap="round"/><rect x="10" y="34" width="28" height="8" rx="2" fill="none" stroke="#1E90FF" stroke-width="2"/><path d="M18 38 L30 38" stroke="#1E90FF" stroke-width="1" stroke-linecap="round"/></svg>
+            </div>
+            <h3 style="color: var(--accent-gold);">AI Governance & Security</h3>
+            <p>AI inventory, data privacy, algorithmic accountability, model security, ethical AI, and regulatory compliance.</p>
+            <span class="assess-module-badge">ISZ Exclusive</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risk Scoring -->
+    <section style="padding: 80px 0; background: var(--card-bg);">
+      <div class="container">
+        <h2 style="text-align: center;">Risk Scoring Methodology</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 50px;">Every vulnerability is scored using a structured risk matrix that combines likelihood and impact, weighted against existing control effectiveness.</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+          <div class="assess-method-card">
+            <h3>Likelihood</h3>
+            <p>How probable is exploitation of this vulnerability? Scored 1-5 from Rare to Almost Certain.</p>
+          </div>
+          <div class="assess-method-card">
+            <h3>Impact</h3>
+            <p>What is the consequence if exploited? Scored 1-5 from Negligible to Catastrophic.</p>
+          </div>
+          <div class="assess-method-card">
+            <h3>Controls</h3>
+            <p>How effective are current mitigations? Scored 1-5 from None to Fully Effective, reducing the inherent risk.</p>
+          </div>
+        </div>
+        <div class="assess-formula">
+          <p><strong>Risk Score</strong> = (Likelihood &times; Impact) &minus; Control Effectiveness Offset</p>
+          <div class="assess-risk-legend">
+            <span class="risk-badge risk-critical">Critical (20-25)</span>
+            <span class="risk-badge risk-high">High (15-19)</span>
+            <span class="risk-badge risk-medium">Medium (9-14)</span>
+            <span class="risk-badge risk-low">Low (4-8)</span>
+            <span class="risk-badge risk-minimal">Minimal (1-3)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section style="padding: 80px 0;">
+      <div class="container">
+        <h2 style="text-align: center;">Platform Capabilities</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
+          <div>
+            <h3>Assessment Features</h3>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Systematic module-by-module facility survey</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Expert-curated vulnerability checklists</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Quantitative risk scoring with heat map</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Proven solution recommendations per finding</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Automatic progress saving to browser</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Reporting Features</h3>
+            <ul style="list-style: none;">
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Executive summary with overall risk posture</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Module-level risk breakdown and scores</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Prioritized remediation recommendations</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Compliance alignment indicators</li>
+              <li style="margin-bottom: 15px; padding-left: 24px; position: relative;"><span style="position: absolute; left: 0; color: var(--accent-gold);">&#9654;</span> Print-ready and PDF-exportable format</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Assess Your Facility?</h2>
+        <p>Start a comprehensive physical security and AI governance assessment now.</p>
+        <button class="btn btn-primary btn-large" onclick="AssessmentApp.start()" style="background: white; color: var(--primary-navy);">Launch Assessment Tool</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Assessment Wizard (hidden until started) -->
+  <div id="assessment-wizard" style="display: none;">
+    <!-- Progress Bar -->
+    <div class="assess-progress-bar">
+      <div class="container">
+        <div class="assess-progress-steps">
+          <div class="assess-progress-step active" data-step="setup">
+            <span class="assess-step-num">1</span>
+            <span class="assess-step-label">Setup</span>
+          </div>
+          <div class="assess-progress-connector"></div>
+          <div class="assess-progress-step" data-step="modules">
+            <span class="assess-step-num">2</span>
+            <span class="assess-step-label">Modules</span>
+          </div>
+          <div class="assess-progress-connector"></div>
+          <div class="assess-progress-step" data-step="assess">
+            <span class="assess-step-num">3</span>
+            <span class="assess-step-label">Assess</span>
+          </div>
+          <div class="assess-progress-connector"></div>
+          <div class="assess-progress-step" data-step="review">
+            <span class="assess-step-num">4</span>
+            <span class="assess-step-label">Review</span>
+          </div>
+          <div class="assess-progress-connector"></div>
+          <div class="assess-progress-step" data-step="report">
+            <span class="assess-step-num">5</span>
+            <span class="assess-step-label">Report</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wizard Content Area -->
+    <div class="container" style="padding-top: 30px; padding-bottom: 60px;">
+      <div id="wizard-content">
+        <!-- Dynamically rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Ice Station Zebra LLC</h4>
+          <p>Pittsburgh, PA</p>
+          <p><a href="mailto:tim@icestationzebra.one">tim@icestationzebra.one</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="process.html">How It Works</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="assessment.html">Assessment</a></li>
+            <li><a href="custom-order.html">Custom Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://iszactual.myshopify.com/" target="_blank">Shopify Store</a></li>
+            <li><a href="https://www.linkedin.com/company/ice-station-zebra-llc" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ice Station Zebra LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/assessment.js"></script>
+</body>
+</html>
