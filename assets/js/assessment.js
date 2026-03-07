@@ -53,6 +53,36 @@ const AssessmentApp = {
           name: 'Perimeter Lighting',
           description: 'Adequacy of lighting along the perimeter, including coverage gaps and light levels.',
           solutions: ['Install continuous perimeter lighting at 5+ foot-candles', 'Add motion-activated lighting in vulnerable areas', 'Eliminate dark spots and shadow zones', 'Implement timer and photocell controls for reliability']
+        },
+        {
+          id: 'perimeter_drainage',
+          name: 'Drainage & Underground Access',
+          description: 'Security of storm drains, culverts, tunnels, and underground utility passages that cross the perimeter.',
+          solutions: ['Install security grates on all drainage culverts larger than 8 inches', 'Deploy tamper sensors on utility tunnel access points', 'Conduct periodic inspections of underground crossings', 'Map all subsurface perimeter penetrations']
+        },
+        {
+          id: 'perimeter_standoff',
+          name: 'Standoff Distance & Setback',
+          description: 'Adequacy of standoff distance between the perimeter and protected structures to mitigate blast and vehicle threats.',
+          solutions: ['Maximize standoff distance through landscape and barrier design', 'Install jersey barriers or planters to enforce vehicle setback', 'Apply blast-mitigation glazing on perimeter-facing windows', 'Conduct blast vulnerability analysis for critical buildings']
+        },
+        {
+          id: 'perimeter_cctv',
+          name: 'Perimeter CCTV Coverage',
+          description: 'Dedicated camera coverage of the perimeter fence line, gates, and approach routes.',
+          solutions: ['Install cameras covering 100% of the fence line', 'Deploy thermal or IR cameras for nighttime perimeter monitoring', 'Integrate perimeter cameras with video analytics for intrusion alerts', 'Ensure cameras overlap fields of view to eliminate blind spots']
+        },
+        {
+          id: 'perimeter_ids',
+          name: 'Perimeter Intrusion Detection',
+          description: 'Electronic detection systems on or along the perimeter such as fence sensors, buried cable, or microwave beams.',
+          solutions: ['Install fence-mounted vibration or taut-wire sensors', 'Deploy buried seismic or fiber-optic cable detection', 'Implement microwave or IR beam barriers at vulnerable segments', 'Integrate perimeter IDS with CCTV for alarm verification']
+        },
+        {
+          id: 'perimeter_adjacent',
+          name: 'Adjacent Property & Threat Environment',
+          description: 'Assessment of neighboring land use, shared boundaries, and external threat vectors that affect perimeter risk.',
+          solutions: ['Conduct neighborhood threat assessment and crime analysis', 'Coordinate security measures with adjacent property owners', 'Monitor changes in neighboring land use or construction', 'Establish liaison with local law enforcement for area intelligence']
         }
       ]
     },
@@ -90,6 +120,36 @@ const AssessmentApp = {
           name: 'Loading Docks & Service Entries',
           description: 'Security of shipping/receiving areas, service entrances, and utility access points.',
           solutions: ['Install roll-up door alarms and access controls', 'Deploy CCTV coverage at all dock positions', 'Implement vendor credentialing and scheduling', 'Secure utility access panels and mechanical rooms']
+        },
+        {
+          id: 'ac_tailgating',
+          name: 'Anti-Tailgating & Piggybacking',
+          description: 'Measures preventing unauthorized persons from following authorized personnel through controlled entry points.',
+          solutions: ['Install optical turnstiles or speed gates with tailgate detection', 'Deploy mantrap/airlock entries at high-security zones', 'Implement security awareness training on tailgating risks', 'Add CCTV-based tailgating analytics at key entries']
+        },
+        {
+          id: 'ac_after_hours',
+          name: 'After-Hours Access Control',
+          description: 'Policies and technical controls governing building access outside normal business hours.',
+          solutions: ['Implement time-based access schedules restricting off-hours entry', 'Require manager approval for after-hours access grants', 'Deploy alarm integration that arms/disarms with last-out/first-in credentials', 'Generate and review after-hours access reports weekly']
+        },
+        {
+          id: 'ac_termination',
+          name: 'Access Revocation & Termination',
+          description: 'Timeliness and completeness of access removal when employees separate or change roles.',
+          solutions: ['Integrate access control system with HR termination workflow', 'Implement same-day credential deactivation for terminations', 'Conduct quarterly access rights reviews and audits', 'Establish process for collecting physical keys, badges, and tokens']
+        },
+        {
+          id: 'ac_contractor',
+          name: 'Contractor & Vendor Access',
+          description: 'Controls for managing temporary access for contractors, vendors, and third-party service providers.',
+          solutions: ['Implement contractor badge system with distinct visual identifiers', 'Require background checks for contractors with unescorted access', 'Set automatic credential expiration for all temporary access', 'Maintain contractor access log and review monthly']
+        },
+        {
+          id: 'ac_parking',
+          name: 'Parking & Vehicle Access Control',
+          description: 'Controls over parking areas, vehicle access credentials, and separation of parking zones.',
+          solutions: ['Implement gated parking with credential-based vehicle access', 'Separate visitor, employee, and executive parking zones', 'Deploy license plate recognition for automated vehicle screening', 'Enforce parking registration and permit display requirements']
         }
       ]
     },
@@ -127,6 +187,36 @@ const AssessmentApp = {
           name: 'Video Analytics & Integration',
           description: 'Use of analytics (motion detection, object tracking, facial recognition) and system integration.',
           solutions: ['Deploy video analytics for perimeter intrusion detection', 'Implement license plate recognition at vehicle entries', 'Integrate VMS with access control for event correlation', 'Consider people-counting and behavioral analytics']
+        },
+        {
+          id: 'surv_network',
+          name: 'Surveillance Network Security',
+          description: 'Cybersecurity posture of the CCTV network including segmentation, encryption, and firmware management.',
+          solutions: ['Isolate surveillance network on dedicated VLAN', 'Enable HTTPS/TLS on all camera streams and VMS connections', 'Implement regular firmware update program for all cameras', 'Change default credentials on all surveillance devices']
+        },
+        {
+          id: 'surv_access_control',
+          name: 'Video System Access Control',
+          description: 'User access management for video management system including role-based permissions and audit logging.',
+          solutions: ['Implement role-based access for VMS with least-privilege principles', 'Enable audit logging for all video access, export, and deletion', 'Require multi-factor authentication for remote VMS access', 'Review VMS user accounts quarterly and remove stale accounts']
+        },
+        {
+          id: 'surv_maintenance',
+          name: 'Camera Maintenance & Uptime',
+          description: 'Preventive maintenance program, uptime monitoring, and repair response times for surveillance equipment.',
+          solutions: ['Implement automated camera health monitoring with alerting', 'Establish maximum 24-hour repair SLA for critical cameras', 'Schedule quarterly camera cleaning and alignment checks', 'Maintain spare camera inventory for rapid replacement']
+        },
+        {
+          id: 'surv_evidence',
+          name: 'Evidence & Export Procedures',
+          description: 'Procedures for video evidence retrieval, chain of custody, and legal admissibility.',
+          solutions: ['Develop documented video evidence retrieval procedures', 'Implement digital watermarking or hash verification for exports', 'Train operators on chain-of-custody documentation', 'Use tamper-evident export formats for law enforcement requests']
+        },
+        {
+          id: 'surv_coverage_audit',
+          name: 'Coverage Gap Analysis',
+          description: 'Systematic review identifying blind spots, obstructed views, and areas lacking surveillance coverage.',
+          solutions: ['Conduct annual camera coverage audit with documented gap analysis', 'Use camera planning software to validate field-of-view coverage', 'Address identified blind spots within 30 days of discovery', 'Map camera coverage against facility risk zones']
         }
       ]
     },
@@ -164,6 +254,36 @@ const AssessmentApp = {
           name: 'Lighting Maintenance Program',
           description: 'Preventive maintenance, lamp replacement schedules, and light-level monitoring.',
           solutions: ['Implement scheduled preventive maintenance program', 'Conduct annual foot-candle surveys', 'Maintain spare lamp inventory for rapid replacement', 'Upgrade to LED for reduced maintenance and better performance']
+        },
+        {
+          id: 'light_cctv_coord',
+          name: 'Lighting & CCTV Coordination',
+          description: 'Alignment between lighting levels and camera performance requirements for effective video surveillance.',
+          solutions: ['Coordinate lighting design with camera placement for optimal image quality', 'Eliminate backlighting conditions that blind camera views', 'Ensure minimum illumination meets camera low-light specifications', 'Test camera image quality under all lighting conditions including emergency mode']
+        },
+        {
+          id: 'light_controls',
+          name: 'Lighting Controls & Automation',
+          description: 'Timers, photocells, motion sensors, and building management system integration for security lighting.',
+          solutions: ['Install photocell controls to ensure automatic dusk-to-dawn operation', 'Deploy motion-activated lighting in low-traffic security zones', 'Integrate security lighting with building management system', 'Implement override controls accessible to security personnel']
+        },
+        {
+          id: 'light_vandal',
+          name: 'Lighting Fixture Protection',
+          description: 'Physical protection of light fixtures against vandalism, tampering, and environmental damage.',
+          solutions: ['Install vandal-resistant fixtures in accessible exterior locations', 'Mount fixtures at heights that deter tampering', 'Use polycarbonate lenses in high-risk areas', 'Deploy tamper alarms on critical security lighting fixtures']
+        },
+        {
+          id: 'light_uniformity',
+          name: 'Lighting Uniformity & Quality',
+          description: 'Evenness of illumination, color rendering, and elimination of harsh shadows or glare in security-critical areas.',
+          solutions: ['Achieve uniformity ratio of 4:1 or better in pedestrian areas', 'Use fixtures with appropriate color temperature (4000K-5000K) for facial recognition', 'Eliminate harsh shadows near entry points and recessed areas', 'Address glare conditions that impair guard observation or camera performance']
+        },
+        {
+          id: 'light_pathway',
+          name: 'Pathway & Walkway Lighting',
+          description: 'Illumination of pedestrian pathways, sidewalks, and routes between buildings and parking areas.',
+          solutions: ['Light all pedestrian pathways to minimum 2 foot-candles', 'Install bollard or path-level lighting along walkways', 'Ensure continuous lighting with no dark gaps between fixtures', 'Prioritize lighting on routes from parking to building entries']
         }
       ]
     },
@@ -201,6 +321,36 @@ const AssessmentApp = {
           name: 'System Monitoring & Response',
           description: 'Central station monitoring, alarm verification, and response procedures.',
           solutions: ['Contract with UL-listed central monitoring station', 'Implement alarm verification procedures to reduce false alarms', 'Establish response time standards and measure compliance', 'Test all alarm communication paths regularly']
+        },
+        {
+          id: 'alarm_integration',
+          name: 'System Integration & Correlation',
+          description: 'Integration of alarm systems with access control, CCTV, and building management for correlated event response.',
+          solutions: ['Integrate alarm events with CCTV camera call-up', 'Link access control violations with alarm triggers', 'Implement alarm event correlation engine for multi-sensor verification', 'Unify alarm dashboards across all subsystems into single SOC view']
+        },
+        {
+          id: 'alarm_testing',
+          name: 'Testing & Inspection Program',
+          description: 'Regular testing, inspection, and maintenance schedules for all alarm and detection systems.',
+          solutions: ['Implement quarterly testing of all intrusion detection devices', 'Conduct annual comprehensive alarm system inspection', 'Test fire alarm systems per NFPA 72 requirements', 'Document all test results and corrective actions taken']
+        },
+        {
+          id: 'alarm_false_alarm',
+          name: 'False Alarm Management',
+          description: 'Programs and procedures to track, analyze, and reduce false alarm rates.',
+          solutions: ['Track false alarm rates by zone and sensor type', 'Implement alarm verification (audio/video) before dispatch', 'Adjust sensor sensitivity and placement to reduce nuisance alarms', 'Set target false alarm rate and review monthly']
+        },
+        {
+          id: 'alarm_communication',
+          name: 'Alarm Communication Paths',
+          description: 'Primary and backup communication paths from alarm panels to monitoring stations.',
+          solutions: ['Implement dual communication paths (IP primary, cellular backup)', 'Monitor communication path health with supervisory signals', 'Encrypt alarm communications to prevent interception or spoofing', 'Test backup communication path failover quarterly']
+        },
+        {
+          id: 'alarm_power',
+          name: 'Alarm System Power & Resilience',
+          description: 'Backup power, surge protection, and system resilience for alarm infrastructure.',
+          solutions: ['Ensure minimum 24-hour battery backup for all alarm panels', 'Install surge protection on all alarm circuits', 'Connect critical alarm infrastructure to generator power', 'Monitor battery health and replace per manufacturer schedule']
         }
       ]
     },
@@ -238,6 +388,36 @@ const AssessmentApp = {
           name: 'Stairwell & Elevator Security',
           description: 'Access control and monitoring of vertical circulation within the building.',
           solutions: ['Install access control on stairwell doors', 'Deploy elevator access control by floor', 'Add CCTV in all elevator cabs and stairwells', 'Implement floor-restriction logic for elevators']
+        },
+        {
+          id: 'int_document',
+          name: 'Document & Media Security',
+          description: 'Controls for protecting sensitive documents, removable media, and printed materials from unauthorized access.',
+          solutions: ['Implement secure print-release at all multifunction devices', 'Deploy shred bins and cross-cut shredders in all work areas', 'Establish clean-desk policy with regular compliance checks', 'Restrict USB ports and removable media through endpoint controls']
+        },
+        {
+          id: 'int_utility',
+          name: 'Utility & Mechanical Room Security',
+          description: 'Physical security of HVAC, electrical, plumbing, and other utility spaces that could enable building-wide disruption.',
+          solutions: ['Install access control on all utility and mechanical rooms', 'Deploy tamper alarms on electrical panels and HVAC controls', 'Restrict utility room access to authorized maintenance personnel', 'Install CCTV covering utility room entry points']
+        },
+        {
+          id: 'int_mailroom',
+          name: 'Mailroom & Package Screening',
+          description: 'Security of mail handling, package receiving, and screening procedures for suspicious items.',
+          solutions: ['Establish dedicated mailroom separate from general work areas', 'Implement mail and package screening procedures', 'Train mailroom staff on suspicious package identification', 'Deploy X-ray screening for facilities with elevated threat profiles']
+        },
+        {
+          id: 'int_after_hours',
+          name: 'After-Hours Interior Security',
+          description: 'Security measures active during non-business hours including alarm zones, motion detection, and patrol coverage.',
+          solutions: ['Arm interior motion detection zones after business hours', 'Implement floor-by-floor alarm zoning for phased arming', 'Schedule after-hours guard patrols of interior spaces', 'Deploy video analytics for after-hours movement detection']
+        },
+        {
+          id: 'int_ceiling_floor',
+          name: 'Ceiling & Floor Penetration Security',
+          description: 'Security of above-ceiling and below-floor spaces that could allow bypassing wall-based access controls.',
+          solutions: ['Extend sensitive area walls from slab to slab (floor to deck)', 'Install motion sensors in above-ceiling plenums of secure areas', 'Deploy mesh or barrier above drop ceilings in high-security zones', 'Inspect raised floor voids for unauthorized access paths']
         }
       ]
     },
@@ -275,6 +455,36 @@ const AssessmentApp = {
           name: 'Incident Response Capability',
           description: 'Ability to detect, respond to, and document security incidents.',
           solutions: ['Develop comprehensive incident response procedures', 'Implement digital incident reporting system', 'Conduct regular tabletop and practical exercises', 'Establish mutual aid agreements with local law enforcement']
+        },
+        {
+          id: 'pers_screening',
+          name: 'Personnel Screening & Background Checks',
+          description: 'Pre-employment and ongoing background investigation requirements for security staff.',
+          solutions: ['Require comprehensive background checks for all security personnel', 'Conduct periodic re-investigation at defined intervals', 'Implement drug screening program per policy', 'Verify all required licenses and certifications before deployment']
+        },
+        {
+          id: 'pers_supervision',
+          name: 'Supervision & Quality Assurance',
+          description: 'Supervisory oversight, performance auditing, and quality control of security operations.',
+          solutions: ['Assign dedicated security supervisors with appropriate span of control', 'Conduct random post inspections and performance audits', 'Implement guard performance scoring and review program', 'Deploy covert testing to validate security response']
+        },
+        {
+          id: 'pers_sop',
+          name: 'Standard Operating Procedures',
+          description: 'Comprehensiveness, currency, and accessibility of written security post orders and SOPs.',
+          solutions: ['Develop site-specific post orders for every guard position', 'Review and update all SOPs annually at minimum', 'Ensure SOPs are accessible at every security post', 'Test guard knowledge of SOPs through periodic quizzes']
+        },
+        {
+          id: 'pers_technology',
+          name: 'Guard Force Technology',
+          description: 'Technology tools provided to security personnel including body cameras, mobile devices, and reporting platforms.',
+          solutions: ['Deploy body-worn cameras for all security officers', 'Provide mobile devices with incident reporting applications', 'Implement electronic daily activity reporting', 'Equip guards with portable radios with building-wide coverage']
+        },
+        {
+          id: 'pers_law_enforcement',
+          name: 'Law Enforcement Coordination',
+          description: 'Relationships, agreements, and coordination procedures with local law enforcement agencies.',
+          solutions: ['Establish formal liaison with local police precinct', 'Conduct annual joint training exercises with law enforcement', 'Share facility maps and emergency plans with responding agencies', 'Maintain current emergency contact list for all relevant agencies']
         }
       ]
     },
@@ -312,6 +522,36 @@ const AssessmentApp = {
           name: 'Drills & Exercise Program',
           description: 'Frequency and quality of emergency drills, tabletops, and full-scale exercises.',
           solutions: ['Conduct fire drills at minimum frequency per code', 'Perform annual tabletop exercises for key scenarios', 'Execute full-scale exercise annually', 'Document lessons learned and implement improvements']
+        },
+        {
+          id: 'emrg_medical',
+          name: 'Medical Emergency Response',
+          description: 'First aid capabilities, AED deployment, trained responders, and medical emergency procedures.',
+          solutions: ['Deploy AEDs in accessible locations per AHA guidelines', 'Maintain trained first responders on each shift and floor', 'Stock first aid kits and inspect monthly', 'Establish relationship with local EMS for facility familiarization']
+        },
+        {
+          id: 'emrg_active_threat',
+          name: 'Active Threat / Active Shooter Preparedness',
+          description: 'Plans, training, and physical measures addressing active threat and workplace violence scenarios.',
+          solutions: ['Develop active shooter / active threat response plan', 'Conduct annual Run-Hide-Fight or equivalent training for all employees', 'Install classroom and office door barricade or lockdown hardware', 'Coordinate response plan with local law enforcement tactical units']
+        },
+        {
+          id: 'emrg_shelter',
+          name: 'Shelter-in-Place & Lockdown',
+          description: 'Procedures and infrastructure for sheltering in place during chemical, weather, or security emergencies.',
+          solutions: ['Designate and sign shelter-in-place locations for each floor', 'Pre-position shelter supplies (water, radio, first aid)', 'Implement building-wide lockdown capability with single-action initiation', 'Test shelter-in-place and lockdown procedures semi-annually']
+        },
+        {
+          id: 'emrg_weather',
+          name: 'Severe Weather Preparedness',
+          description: 'Plans and systems for responding to severe weather including tornadoes, hurricanes, floods, and winter storms.',
+          solutions: ['Subscribe to NOAA weather alert service with automated notifications', 'Designate tornado/severe weather shelter areas on every floor', 'Develop winter weather staffing and facility protection plans', 'Pre-position severe weather supplies in designated shelter areas']
+        },
+        {
+          id: 'emrg_recovery',
+          name: 'Post-Incident Recovery',
+          description: 'Plans and resources for recovering facility operations after a security incident or disaster.',
+          solutions: ['Develop facility damage assessment procedures and trained teams', 'Pre-contract emergency restoration and cleanup vendors', 'Maintain insurance documentation and claims procedures', 'Establish post-incident psychological support resources for staff']
         }
       ]
     },
@@ -367,6 +607,18 @@ const AssessmentApp = {
           name: 'Regulatory Compliance & Standards',
           description: 'Alignment with AI-specific regulations, standards, and frameworks (EU AI Act, NIST AI RMF, ISO 42001).',
           solutions: ['Map AI systems to applicable regulatory requirements', 'Implement NIST AI Risk Management Framework (AI RMF)', 'Pursue ISO/IEC 42001 AI Management System certification', 'Monitor evolving AI regulations and adjust governance accordingly']
+        },
+        {
+          id: 'ai_supply_chain',
+          name: 'AI Supply Chain & Third-Party Risk',
+          description: 'Risk management for third-party AI models, APIs, training data providers, and cloud AI services.',
+          solutions: ['Inventory all third-party AI components and service providers', 'Assess vendor AI security practices and certifications', 'Implement contractual AI governance requirements for vendors', 'Monitor third-party AI model updates and changes for security impacts']
+        },
+        {
+          id: 'ai_lifecycle',
+          name: 'AI Model Lifecycle Management',
+          description: 'Governance of the full AI model lifecycle from development through deployment, monitoring, and retirement.',
+          solutions: ['Implement model versioning and change management procedures', 'Establish model performance monitoring with automated drift alerts', 'Define model retirement criteria and decommissioning procedures', 'Maintain model lineage documentation from training data through production']
         }
       ]
     }
@@ -1091,6 +1343,30 @@ const AssessmentApp = {
               </div>
             </div>
             ${info.scope ? `<p style="margin-top: 20px;"><strong>Assessment Scope:</strong> ${this.esc(info.scope)}</p>` : ''}
+            <div class="assess-exec-narrative" style="margin-top: 24px; line-height: 1.7;">
+              <p>${this.generateNarrative(selectedMods, actionableFindings, riskCounts, overallScore, overallLevel, info)}</p>
+            </div>
+          </div>
+
+          <!-- Methodology -->
+          <div class="assess-report-section">
+            <h2>Assessment Methodology</h2>
+            <p>This assessment was conducted using the Ice Station Zebra Security Assessment Platform, which applies a structured, module-based evaluation methodology. The assessment process consists of four phases:</p>
+            <ol style="margin: 16px 0 16px 20px; line-height: 1.8;">
+              <li><strong>Scoping & Configuration</strong> — Facility details are documented and relevant security domains are selected for evaluation.</li>
+              <li><strong>Systematic Survey</strong> — Each assessment item is evaluated for current compliance status, with risk factors scored across three dimensions.</li>
+              <li><strong>Risk Scoring</strong> — Inherent risk is calculated as Likelihood &times; Impact (scale of 1&ndash;25), then offset by Control Effectiveness to produce a residual risk score.</li>
+              <li><strong>Analysis & Reporting</strong> — Findings are aggregated by module and severity, and prioritized recommendations are generated.</li>
+            </ol>
+            <p><strong>Risk Scoring Formula:</strong> Residual Risk = (Likelihood &times; Impact) &minus; Control Effectiveness Offset</p>
+            <div class="assess-risk-legend" style="margin-top: 12px;">
+              <span class="risk-badge risk-critical">Critical (20-25)</span>
+              <span class="risk-badge risk-high">High (15-19)</span>
+              <span class="risk-badge risk-medium">Medium (9-14)</span>
+              <span class="risk-badge risk-low">Low (4-8)</span>
+              <span class="risk-badge risk-minimal">Minimal (1-3)</span>
+            </div>
+            <p style="margin-top: 16px;">This methodology aligns with ASIS International Physical Security standards, NIST Cybersecurity Framework, and CPTED principles. ${this.state.selectedModules.includes('ai_governance') ? 'The AI Governance module additionally aligns with the NIST AI Risk Management Framework, EU AI Act, and ISO/IEC 42001.' : ''}</p>
           </div>
 
           <!-- Risk Heat Map -->
@@ -1223,6 +1499,47 @@ const AssessmentApp = {
         </div>
       </div>
     `;
+  },
+
+  // ── Narrative Generator ───────────────────────────────────
+  generateNarrative(selectedMods, actionableFindings, riskCounts, overallScore, overallLevel, info) {
+    const totalItems = selectedMods.reduce((sum, m) => sum + m.items.length, 0);
+    const assessedItems = actionableFindings.length;
+    const compliantItems = totalItems - assessedItems;
+    const critHigh = riskCounts.critical + riskCounts.high;
+
+    let posture = '';
+    if (overallScore >= 20) posture = 'The facility exhibits a <strong>critical security posture</strong> requiring immediate executive attention and resource allocation.';
+    else if (overallScore >= 15) posture = 'The facility presents a <strong>high-risk security posture</strong> with significant vulnerabilities that require urgent remediation.';
+    else if (overallScore >= 9) posture = 'The facility maintains a <strong>moderate security posture</strong> with identified gaps that should be addressed through a structured improvement program.';
+    else if (overallScore >= 4) posture = 'The facility demonstrates a <strong>generally sound security posture</strong> with minor vulnerabilities that can be addressed through routine improvements.';
+    else if (overallScore > 0) posture = 'The facility maintains a <strong>strong security posture</strong> with only minimal residual risks identified.';
+    else posture = 'No actionable risk findings were recorded during this assessment.';
+
+    let narrative = `A comprehensive security assessment of <strong>${this.esc(info.facility)}</strong> was conducted on ${info.date} by ${this.esc(info.assessor)}. The assessment evaluated <strong>${totalItems} items</strong> across <strong>${selectedMods.length} security modules</strong>, producing an overall risk score of <strong>${overallScore}/25 (${overallLevel.label})</strong>. ${posture}`;
+
+    if (critHigh > 0) {
+      narrative += ` A total of <strong>${critHigh} finding${critHigh > 1 ? 's' : ''}</strong> were rated Critical or High risk, demanding priority remediation. `;
+    }
+
+    if (riskCounts.medium > 0) {
+      narrative += ` An additional <strong>${riskCounts.medium} medium-risk finding${riskCounts.medium > 1 ? 's' : ''}</strong> were identified for planned corrective action. `;
+    }
+
+    // Identify worst module
+    let worstMod = null;
+    let worstAvg = 0;
+    selectedMods.forEach(mod => {
+      const ms = this.getModuleScore(mod.id);
+      if (ms.avg > worstAvg) { worstAvg = ms.avg; worstMod = mod; }
+    });
+
+    if (worstMod && worstAvg > 0) {
+      const worstLevel = this.getRiskLevel(worstAvg);
+      narrative += `The highest-risk domain is <strong>${worstMod.name}</strong> with an average score of ${worstAvg}/25 (${worstLevel.label}), which should be the primary focus for improvement efforts.`;
+    }
+
+    return narrative;
   },
 
   // ── Heat Map Renderer ──────────────────────────────────────
