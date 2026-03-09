@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Estimator - Ice Station Zebra</title>
+    <meta name="description" content="Get an instant pricing estimate for your custom challenge coins. Configure size, quantity, plating, and features to see real-time pricing.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <style>
+      .estimator-wrapper {
+        width: 100%;
+        min-height: calc(100vh - 82px);
+        display: flex;
+        flex-direction: column;
+      }
+      .estimator-wrapper iframe {
+        flex: 1;
+        width: 100%;
+        min-height: 800px;
+        border: none;
+        background: #0f1419;
+      }
+      @media (max-width: 768px) {
+        .estimator-wrapper iframe {
+          min-height: 1200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-brand">
+          <a href="index.html" class="logo-link">
+            <img src="assets/images/logo.png" alt="Ice Station Zebra" class="logo">
+          </a>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="process.html" class="nav-link">How It Works</a></li>
+          <li><a href="design-guide.html" class="nav-link">Design Guide</a></li>
+          <li><a href="estimator.html" class="nav-link active">Estimator</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="custom-order.html" class="nav-link cta-link">Custom Order</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Estimator Embed -->
+    <div class="estimator-wrapper">
+      <iframe src="https://estimate.isz.one/estimate" title="Challenge Coin Pricing Estimator" loading="lazy"></iframe>
+    </div>
+
+  </body>
+</html>
