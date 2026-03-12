@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Reed Group - AI Governance Advisory for Boards and Executive Teams</title>
+  <meta name="description" content="The Reed Group provides AI governance advisory for boards and executive teams. Founded by Timothy E. Reed, CPP, Director of Security at Aurora Innovation.">
+  <meta name="author" content="Timothy E. Reed">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Reed Group - AI Governance Advisory">
+  <meta property="og:description" content="AI governance advisory for boards and executive teams. Founded by Timothy E. Reed, CPP.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://advisory.isz.one">
+
+  <!-- Schema.org Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "The Reed Group",
+    "url": "https://advisory.isz.one",
+    "description": "AI governance advisory for boards and executive teams",
+    "founder": {
+      "@type": "Person",
+      "name": "Timothy E. Reed",
+      "url": "https://isz.one/about"
+    },
+    "knowsAbout": [
+      "AI Governance",
+      "Security Governance",
+      "Emerging Technology Strategy",
+      "Board Advisory"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --navy: #0B1D33;
+      --steel: #3A4F6A;
+      --ice: #B8D4E3;
+      --ice-light: #E4EFF5;
+      --frost: #F4F8FB;
+      --white: #FFFFFF;
+      --accent: #4A90B8;
+      --text: #1A2A3A;
+      --text-muted: #5A6A7A;
+      --border: #D0DCE6;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(160deg, var(--navy) 0%, var(--steel) 100%);
+      color: var(--white);
+      padding: 80px 0 64px;
+      text-align: center;
+    }
+    header .label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--ice);
+      margin-bottom: 16px;
+    }
+    header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    header .subtitle {
+      font-size: 18px;
+      color: var(--ice-light);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* SECTIONS */
+    section { padding: 56px 0; border-bottom: 1px solid var(--border); }
+    section:last-of-type { border-bottom: none; }
+    section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+    section p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    /* FOCUS AREAS */
+    .focus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+      margin-top: 8px;
+    }
+    .focus-card {
+      background: var(--frost);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 28px 24px;
+    }
+    .focus-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .focus-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* FRAMEWORK */
+    .framework-box {
+      background: var(--frost);
+      border-left: 4px solid var(--accent);
+      padding: 32px;
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+    }
+    .framework-box h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .framework-box p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .framework-box p:last-child { margin-bottom: 0; }
+
+    /* BACKGROUND */
+    .logo-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 16px;
+    }
+    .logo-item {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--steel);
+    }
+
+    /* CTA */
+    .cta-section {
+      text-align: center;
+      padding: 64px 0;
+      background: var(--frost);
+    }
+    .cta-section h2 { margin-bottom: 12px; }
+    .cta-section p { color: var(--text-muted); margin-bottom: 24px; }
+    .cta-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      background: var(--navy);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: var(--steel); }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      color: var(--ice);
+      padding: 28px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: var(--ice-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 680px) {
+      .focus-grid { grid-template-columns: 1fr; }
+      header h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="label">The Reed Group</div>
+      <h1>AI Governance Advisory for Boards and Executive Teams</h1>
+      <div class="subtitle">Translating the convergence of AI, security, and technology into governance frameworks that boards can act on.</div>
+    </div>
+  </header>
+
+  <!-- FOCUS AREAS -->
+  <section>
+    <div class="container">
+      <h2>Focus Areas</h2>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <h3>AI Risk Framing</h3>
+          <p>Structuring AI risk for board-level comprehension and decision-making. Moving beyond compliance checklists to operational risk governance that reflects how AI actually deploys in the enterprise.</p>
+        </div>
+        <div class="focus-card">
+          <h3>Security Governance</h3>
+          <p>Aligning security programs with business strategy. Physical security, protective intelligence, supply chain integrity, and IP protection in environments where AI reshapes threat surfaces.</p>
+        </div>
+        <div class="focus-card">
+          <h3>Emerging Technology Strategy</h3>
+          <p>Evaluating the governance implications of autonomous systems, agentic AI, and frontier technologies before they become crises. Pattern recognition from 26 years across high-tech enterprises.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JUDGMENT ECONOMY FRAMEWORK -->
+  <section>
+    <div class="container">
+      <h2>The Judgment Economy</h2>
+      <div class="framework-box">
+        <h3>A Framework for Post-Automation Governance</h3>
+        <p>The prevailing narrative around AI and labor focuses on displacement: which jobs will AI replace, and how fast. This framing misses the more consequential shift already underway. The scarce resource in an AI-saturated enterprise is not computation or data. It is judgment.</p>
+        <p>The Judgment Economy describes a transition where organizational value migrates from execution capacity to decision quality. As AI systems absorb routine cognitive work, the humans who remain in the loop are there because their judgment cannot be replicated at acceptable risk. Security decisions, governance trade-offs, ethical calls under ambiguity: these are judgment-intensive functions that define whether AI deployments create value or liability.</p>
+        <p>For boards, this reframes the AI governance question entirely. The issue is not "how do we regulate AI" but "how do we structure the organization so that judgment concentrates where it matters most." That means rethinking reporting lines, decision rights, escalation protocols, and the relationship between security, legal, and technology leadership.</p>
+        <p>Reed's advisory work applies this framework to help boards and executive teams build governance architectures that treat judgment as the critical asset it has become.</p>
+      </div>
+      <p style="margin-top: 16px;"><a href="/assets/judgment-economy-framework.pdf" style="color: var(--accent); font-weight: 600; text-decoration: none;">Download the Framework One-Pager (PDF)</a></p>
+    </div>
+  </section>
+
+  <!-- BACKGROUND -->
+  <section>
+    <div class="container">
+      <h2>Background</h2>
+      <p>Timothy E. Reed, CPP, brings 26 years of security leadership across high-tech enterprises to every advisory engagement. His career spans organizations where security, technology, and governance collide at scale.</p>
+      <div class="logo-row">
+        <span class="logo-item">Aurora Innovation</span>
+        <span class="logo-item">Apple</span>
+        <span class="logo-item">Uber</span>
+        <span class="logo-item">Corning</span>
+      </div>
+      <p style="margin-top: 20px;">Author of <em>Signals in the Noise: Security, Technology, and the Hidden Patterns of Modern Risk</em> (ISZ Press, 2026). Founder of Northern Signal, a newsletter on AI governance and emerging technology risk. Holds the Certified Protection Professional (CPP) designation.</p>
+      <p><a href="https://isz.one/about" style="color: var(--accent); font-weight: 600; text-decoration: none;">Full bio and press resources</a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="container">
+      <h2>Start a Conversation</h2>
+      <p>Board advisory, speaking engagements, and governance strategy.</p>
+      <a href="mailto:Tim.Reed@isz.one" class="cta-btn">Tim.Reed@isz.one</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 The Reed Group. <a href="https://isz.one/about">Timothy E. Reed, CPP</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
