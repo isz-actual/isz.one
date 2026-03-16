@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Portfolio - Ice Station Zebra Challenge Coins</title>
+    <meta name="description" content="Custom challenge coins, pins, and patches by Ice Station Zebra. Browse our design portfolio.">
+    <link rel="canonical" href="https://isz.one/portfolio">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <style>
+      .filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: center;
+        padding: 30px 0;
+      }
+      .filter-btn {
+        background: var(--card-bg);
+        color: var(--text-muted);
+        border: 1px solid var(--border-color);
+        padding: 10px 24px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 500;
+        transition: var(--transition);
+      }
+      .filter-btn:hover {
+        border-color: var(--accent-gold);
+        color: var(--text-light);
+      }
+      .filter-btn.active {
+        background: linear-gradient(135deg, var(--primary-navy), var(--bright-blue));
+        color: white;
+        border-color: var(--bright-blue);
+      }
+      .portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px;
+        padding: 20px 0 60px;
+      }
+      .portfolio-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        background: var(--card-bg);
+        cursor: pointer;
+        transition: var(--transition);
+      }
+      .portfolio-item:hover {
+        border-color: var(--accent-gold);
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        transform: translateY(-4px);
+      }
+      .portfolio-item img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        display: block;
+        transition: var(--transition);
+      }
+      .portfolio-item:hover img {
+        transform: scale(1.03);
+      }
+      .portfolio-item .item-title {
+        padding: 16px 20px;
+        color: var(--accent-gold);
+        font-weight: 600;
+        font-size: 15px;
+        border-top: 1px solid var(--border-color);
+      }
+      .portfolio-item .item-category {
+        padding: 0 20px 16px;
+        color: var(--text-muted);
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .portfolio-item.hidden {
+        display: none;
+      }
+      /* Lightbox */
+      .lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 2000;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+      .lightbox-overlay.active {
+        display: flex;
+      }
+      .lightbox-content {
+        position: relative;
+        max-width: 900px;
+        max-height: 90vh;
+        width: 100%;
+      }
+      .lightbox-content img {
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+        object-fit: contain;
+        border-radius: 4px;
+      }
+      .lightbox-title {
+        color: var(--text-light);
+        text-align: center;
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+      .lightbox-close {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: var(--text-light);
+        font-size: 32px;
+        cursor: pointer;
+        transition: var(--transition);
+        line-height: 1;
+      }
+      .lightbox-close:hover {
+        color: var(--accent-gold);
+      }
+      @media (max-width: 768px) {
+        .portfolio-grid {
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 16px;
+        }
+        .filter-bar {
+          gap: 8px;
+        }
+        .filter-btn {
+          padding: 8px 16px;
+          font-size: 13px;
+        }
+        .lightbox-overlay {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <a href="../index.html" class="logo-link">
+          <img src="../assets/images/logo.png" alt="Ice Station Zebra" class="logo">
+        </a>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="index.html" class="nav-link active">Portfolio</a></li>
+        <li><a href="../process.html" class="nav-link">How It Works</a></li>
+        <li><a href="../design-guide.html" class="nav-link">Design Guide</a></li>
+        <li><a href="../estimator.html" class="nav-link">Estimator</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../custom-order.html" class="nav-link cta-link">Custom Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding: 60px 0;">
+    <div class="container">
+      <h1>Design Portfolio</h1>
+      <p class="hero-description">Precision-crafted challenge coins, pins, and patches for military units, fraternal organizations, public safety agencies, and corporate clients.</p>
+    </div>
+  </section>
+
+  <section style="padding: 40px 0 80px;">
+    <div class="container">
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="fraternal">Fraternal</button>
+        <button class="filter-btn" data-filter="military">Military</button>
+        <button class="filter-btn" data-filter="public-safety">Public Safety</button>
+        <button class="filter-btn" data-filter="corporate">Corporate</button>
+        <button class="filter-btn" data-filter="pins-patches">Pins &amp; Patches</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="fraternal">
+          <img src="images/rochester-lodge.jpg" alt="Rochester Lodge Front">
+          <div class="item-title">Rochester Lodge Front</div>
+          <div class="item-category">Fraternal</div>
+        </div>
+        <div class="portfolio-item" data-category="public-safety">
+          <img src="images/nh-public-safety.jpg" alt="NH Public Safety Vector">
+          <div class="item-title">NH Public Safety Vector</div>
+          <div class="item-category">Public Safety</div>
+        </div>
+        <div class="portfolio-item" data-category="corporate">
+          <img src="images/switch-doc-six.jpg" alt="Switch16 Alternate">
+          <div class="item-title">Switch16 Alternate</div>
+          <div class="item-category">Corporate</div>
+        </div>
+        <div class="portfolio-item" data-category="fraternal">
+          <img src="images/nh-square.jpg" alt="NH Square">
+          <div class="item-title">NH Square</div>
+          <div class="item-category">Fraternal</div>
+        </div>
+        <div class="portfolio-item" data-category="military">
+          <img src="images/schuyer-veterans.jpg" alt="Schuyer Veterans Ribbon">
+          <div class="item-title">Schuyer Veterans Ribbon</div>
+          <div class="item-category">Military</div>
+        </div>
+        <div class="portfolio-item" data-category="fraternal">
+          <img src="images/anchor-club.jpg" alt="Anchor Club Logo">
+          <div class="item-title">Anchor Club Logo</div>
+          <div class="item-category">Fraternal</div>
+        </div>
+        <div class="portfolio-item" data-category="military">
+          <img src="images/higbee-enlisted.jpg" alt="Higbee Jr Enlisted">
+          <div class="item-title">Higbee Jr Enlisted</div>
+          <div class="item-category">Military</div>
+        </div>
+        <div class="portfolio-item" data-category="fraternal">
+          <img src="images/mayflower-lodge.jpg" alt="Mayflower Update v3">
+          <div class="item-title">Mayflower Update v3</div>
+          <div class="item-category">Fraternal</div>
+        </div>
+        <div class="portfolio-item" data-category="corporate">
+          <img src="images/isz-signature.jpg" alt="ISZ Backdrop">
+          <div class="item-title">ISZ Backdrop</div>
+          <div class="item-category">Corporate</div>
+        </div>
+        <div class="portfolio-item" data-category="corporate">
+          <img src="images/motorcycle-circuit.jpg" alt="Motorcycle Circuit Board">
+          <div class="item-title">Motorcycle Circuit Board</div>
+          <div class="item-category">Corporate</div>
+        </div>
+        <div class="portfolio-item" data-category="pins-patches">
+          <img src="images/nh-district-pin.jpg" alt="NH1 Pin Vector">
+          <div class="item-title">NH1 Pin Vector</div>
+          <div class="item-category">Pins &amp; Patches</div>
+        </div>
+        <div class="portfolio-item" data-category="corporate">
+          <img src="images/west-gate-academy.jpg" alt="West Gate Academy Logo">
+          <div class="item-title">West Gate Academy Logo</div>
+          <div class="item-category">Corporate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Commission Your Coins?</h2>
+      <p>Start with a quote. We handle everything from design to delivery.</p>
+      <a href="../custom-order.html" class="btn btn-primary btn-large">Request a Quote</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>Ice Station Zebra LLC</h4>
+          <p>Pittsburgh, PA</p>
+          <p><a href="mailto:tim@icestationzebra.one">tim@icestationzebra.one</a></p>
+        </div>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="index.html">Portfolio</a></li>
+            <li><a href="../process.html">How It Works</a></li>
+            <li><a href="../design-guide.html">Design Guide</a></li>
+            <li><a href="../estimator.html">Estimator</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../custom-order.html">Custom Order</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="https://iszactual.myshopify.com/" target="_blank">Shopify Store</a></li>
+            <li><a href="https://www.linkedin.com/company/ice-station-zebra-llc" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Ice Station Zebra LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <img src="" alt="" id="lightbox-img">
+      <div class="lightbox-title" id="lightbox-title"></div>
+    </div>
+  </div>
+
+  <script>
+    // Filter functionality
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var items = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        var filter = btn.getAttribute('data-filter');
+        items.forEach(function(item) {
+          if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Lightbox functionality
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxTitle = document.getElementById('lightbox-title');
+    var lightboxClose = document.getElementById('lightbox-close');
+
+    items.forEach(function(item) {
+      item.addEventListener('click', function() {
+        var img = item.querySelector('img');
+        var title = item.querySelector('.item-title');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxTitle.textContent = title.textContent;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
