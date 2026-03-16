@@ -135,4 +135,4 @@ Examples from history:
 - **Gradients**: `linear-gradient(135deg, ...)` used throughout for backgrounds
 - **Inline styles**: Some pages use inline `style` attributes for one-off layout adjustments (padding, margins, grid definitions)
 - **External links**: Always use `target="_blank"` for links to external sites
-- **Contact email**: `tim@icestationzebra.one` (used site-wide)
+- **Contact email**: `sales@isz.one` (used site-wide)
