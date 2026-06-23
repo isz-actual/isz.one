@@ -50,16 +50,20 @@ All styles live in `assets/css/style.css` (minified, single line).
 
 ### Color Palette (CSS Custom Properties)
 
-| Variable           | Value     | Usage                        |
-|--------------------|-----------|------------------------------|
-| `--primary-navy`   | `#0052CC` | Primary brand blue           |
-| `--bright-blue`    | `#1E90FF` | Headings, links              |
-| `--dark-bg`        | `#0f1419` | Page background              |
-| `--card-bg`        | `#1a1f2e` | Card/section backgrounds     |
-| `--accent-gold`    | `#D4AF37` | Accent highlights, gold trim |
-| `--text-light`     | `#e8e9ed` | Primary text color           |
-| `--text-muted`     | `#a0a5b5` | Secondary/muted text         |
-| `--border-color`   | `#2a2f3f` | Borders and dividers         |
+Arctic-hybrid palette: cold midnight base + Electric Fade cyan as the dominant accent, with gold retained as the premium/coin accent layer. Aligns to the official ISZ Brand Guidelines (Midnight Signal Blue, Signal White, Electric Fade) while keeping gold for the storefront's coin-metal feel.
+
+| Variable           | Value     | Usage                                         |
+|--------------------|-----------|-----------------------------------------------|
+| `--primary-navy`   | `#0A3D5C` | Deep arctic blue (button/gradient base)       |
+| `--bright-blue`    | `#00A4CC` | Electric Fade — headings, links, primary accent |
+| `--dark-bg`        | `#0B1F33` | Midnight Signal Blue — page background         |
+| `--card-bg`        | `#13283F` | Raised midnight — card/section backgrounds     |
+| `--accent-gold`    | `#D4AF37` | Gold accent — taglines, coin titles, trim      |
+| `--text-light`     | `#F6F7F8` | Signal White — primary text color              |
+| `--text-muted`     | `#A9B1B7` | Static Grey — secondary/muted text             |
+| `--border-color`   | `#27415C` | Arctic borders and dividers                    |
+
+Deep anchor `#081826` (navbar/footer) and semantic risk colors (red/amber/green compliance indicators in the assessment tool) sit outside the variable system and are intentional.
 
 ### Key CSS Components
 
