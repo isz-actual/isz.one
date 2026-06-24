@@ -1012,3 +1012,27 @@
     display: none;
   }
 }
+
+/* ── Consolidated nav: Coins dropdown + CSS-only mobile hamburger ── */
+.navbar .container{position:relative}
+.nav-toggle{display:none}
+.nav-toggle-label{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;margin-left:auto}
+.nav-toggle-label span{display:block;width:26px;height:2px;background:var(--text-light);border-radius:2px;transition:var(--transition)}
+.nav-dropdown{position:relative}
+.nav-dropdown-toggle{cursor:pointer}
+.nav-dropdown-toggle .caret{font-size:0.7em;color:var(--accent-gold)}
+.nav-dropdown-menu{list-style:none;position:absolute;top:100%;left:0;min-width:230px;background:#081826;border:1px solid var(--border-color);border-radius:4px;padding:8px 0;margin:0;display:none;z-index:1100;box-shadow:0 12px 30px rgba(0,0,0,0.45)}
+.nav-dropdown:hover .nav-dropdown-menu,.nav-dropdown:focus-within .nav-dropdown-menu{display:block}
+.nav-dropdown-menu li{margin:0}
+.nav-dropdown-menu a{display:block;padding:10px 18px;color:var(--text-light);text-decoration:none;font-size:14px;font-weight:500;white-space:nowrap;transition:var(--transition)}
+.nav-dropdown-menu a:hover{background:var(--card-bg);color:var(--accent-gold)}
+@media(max-width:900px){
+  .nav-toggle-label{display:flex}
+  .nav-menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:flex-start;gap:2px;background:linear-gradient(135deg,#081826 0%,#13283F 100%);border-bottom:2px solid var(--border-color);padding:12px 20px 18px;z-index:1050}
+  .nav-toggle:checked ~ .nav-menu{display:flex}
+  .nav-menu > li{width:100%}
+  .nav-menu .nav-link{display:block;padding:10px 0}
+  .nav-dropdown-menu{position:static;display:block;min-width:0;border:none;box-shadow:none;background:transparent;padding:0 0 6px 16px}
+  .nav-dropdown:hover .nav-dropdown-menu{display:block}
+  .nav-dropdown-menu a{padding:8px 0}
+}
