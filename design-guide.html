@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Challenge Coin Design Guide | Ice Station Zebra</title>
   <meta name="description" content="Everything you need to know about designing custom challenge coins. From concept to production, Ice Station Zebra walks you through the complete design process.">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #0B1F3A;
-      --gold: #C9A84C;
-      --gold-light: #D4B86A;
-      --steel: #4A6D8C;
-      --ice: #E8EDF2;
-      --ice-light: #F3F6F9;
-      --gray: #3A3F47;
-      --gray-mid: #6B7280;
-      --white: #FFFFFF;
-      --border: #D1D5DB;
+      --navy: #16130F;
+      --gold: #B48C4E;
+      --gold-light: #C9A56A;
+      --bronze: #7A5A33;
+      --steel: #0B52A1;
+      --ice: #EAE2D0;
+      --ice-light: #F2EBDC;
+      --gray: #3B3833;
+      --gray-mid: #5F5A52;
+      --white: #FAF6EE;
+      --border: #DCD3C0;
     }
-
+    h1, h2, h3 { font-family: 'Cinzel', Georgia, serif; font-weight: 600; }
+    .section-number, .info-card .card-label, .process-step .step-num { color: var(--bronze) !important; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Source Serif 4', Georgia, serif;
+      font-family: 'Libre Franklin', -apple-system, sans-serif;
       color: var(--gray);
       background: var(--white);
       line-height: 1.7;
@@ -48,7 +50,7 @@
       justify-content: space-between;
     }
     .site-nav .brand {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-weight: 800;
       font-size: 18px;
       letter-spacing: 2px;
@@ -66,7 +68,7 @@
       list-style: none;
     }
     .nav-links a {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 12px;
       font-weight: 600;
       letter-spacing: 1.5px;
@@ -96,7 +98,7 @@
       pointer-events: none;
     }
     .hero-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 4px;
@@ -106,7 +108,7 @@
       display: inline-block;
     }
     .hero h1 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: clamp(32px, 5vw, 52px);
       font-weight: 800;
       color: var(--white);
@@ -124,7 +126,7 @@
     }
     .hero-cta {
       display: inline-block;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -148,7 +150,7 @@
     }
 
     .section-number {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 4px;
@@ -159,7 +161,7 @@
     }
 
     .content-wrap h2 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: 28px;
       font-weight: 800;
       color: var(--navy);
@@ -169,7 +171,7 @@
     }
 
     .content-wrap h3 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--navy);
@@ -204,7 +206,7 @@
       font-size: 15px;
     }
     .spec-table th {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -220,7 +222,7 @@
       vertical-align: top;
     }
     .spec-table td:first-child {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-weight: 600;
       font-size: 14px;
       color: var(--navy);
@@ -246,7 +248,7 @@
       border-color: var(--gold);
     }
     .info-card .card-label {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -255,7 +257,7 @@
       margin-bottom: 8px;
     }
     .info-card .card-title {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 22px;
       font-weight: 800;
       color: var(--navy);
@@ -290,7 +292,7 @@
     }
     .callout strong {
       color: var(--gold);
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-weight: 700;
     }
 
@@ -315,7 +317,7 @@
       border: 2px solid var(--border);
     }
     .enamel-item .enamel-name {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 12px;
       font-weight: 700;
       color: var(--navy);
@@ -339,7 +341,7 @@
       min-width: 100px;
       padding: 20px 16px;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 1px;
@@ -366,7 +368,7 @@
       margin-bottom: 12px;
     }
     .edge-item .edge-name {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 12px;
       font-weight: 700;
       color: var(--navy);
@@ -387,7 +389,7 @@
     }
     .process-step:last-child { border-bottom: none; }
     .step-num {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 32px;
       font-weight: 800;
       color: var(--gold);
@@ -396,7 +398,7 @@
       width: 48px;
     }
     .step-content h4 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 16px;
       font-weight: 700;
       color: var(--navy);
@@ -423,7 +425,7 @@
       pointer-events: none;
     }
     .cta-section h2 {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Cinzel', Georgia, serif;
       font-size: clamp(24px, 4vw, 36px);
       font-weight: 800;
       color: var(--white);
@@ -445,7 +447,7 @@
     }
     .btn-primary {
       display: inline-block;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -462,7 +464,7 @@
     }
     .btn-secondary {
       display: inline-block;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 1.5px;
@@ -486,7 +488,7 @@
       text-align: center;
     }
     .footer-brand {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-weight: 800;
       font-size: 14px;
       letter-spacing: 2px;
@@ -505,7 +507,7 @@
       justify-content: center;
     }
     .footer-links a {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Libre Franklin', sans-serif;
       font-size: 11px;
       font-weight: 600;
       letter-spacing: 1px;
