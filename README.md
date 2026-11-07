@@ -35,11 +35,10 @@ Live: https://isz.one
 | `estimator.html` | Pricing estimator |
 | `about.html` | Company and founder (Timothy E. Reed, CPP) |
 | `custom-order.html` | Custom order intake (embeds the AI intake agent) |
-| `advisory.html` | Advisory page |
 
 ## Navigation
 
-Shared across pages: Home, a **Coins** dropdown (Masonic / Military / Police, Fire and EMS), Gallery, Portfolio, How It Works, Estimator, About, Shop, and a Custom Order call to action. Mobile uses a CSS-only hamburger (no JavaScript). `design-guide.html` and `advisory.html` use their own standalone layouts.
+Shared across pages: Home, a **Coins** dropdown (Masonic / Military / Police, Fire and EMS), Gallery, Portfolio, How It Works, Estimator, About, Shop, and a Custom Order call to action. Mobile uses a CSS-only hamburger (no JavaScript). `design-guide.html` uses its own standalone layout.
 
 ## Brand and theme
 
