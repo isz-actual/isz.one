@@ -33,7 +33,7 @@ Live: https://isz.one
 | `process.html` | How custom orders work, specs, FAQ |
 | `design-guide.html` | Design guidance for buyers |
 | `estimator.html` | Pricing estimator |
-| `about.html` | Company and founder (Timothy E. Reed, CPP) |
+| `about.html` | Company info and brand beliefs |
 | `custom-order.html` | Custom order intake (embeds the AI intake agent) |
 
 ## Navigation
