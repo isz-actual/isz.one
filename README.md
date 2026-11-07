@@ -34,7 +34,6 @@ Live: https://isz.one
 | `design-guide.html` | Design guidance for buyers |
 | `estimator.html` | Pricing estimator |
 | `about.html` | Company and founder (Timothy E. Reed, CPP) |
-| `assessment.html` | Security assessment tool |
 | `custom-order.html` | Custom order intake (embeds the AI intake agent) |
 | `advisory.html` | Advisory page |
 

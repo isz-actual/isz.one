@@ -63,7 +63,7 @@ Arctic-hybrid palette: cold midnight base + Electric Fade cyan as the dominant a
 | `--text-muted`     | `#A9B1B7` | Static Grey — secondary/muted text             |
 | `--border-color`   | `#27415C` | Arctic borders and dividers                    |
 
-Deep anchor `#081826` (navbar/footer) and semantic risk colors (red/amber/green compliance indicators in the assessment tool) sit outside the variable system and are intentional.
+Deep anchor `#081826` (navbar/footer) sits outside the variable system and is intentional. The security assessment tool was removed on 2026-11-07. Security tools belong to The Reed Group, not ISZ.
 
 ### Key CSS Components
 
