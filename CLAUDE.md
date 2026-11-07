@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Ice Station Zebra (isz.one)** is a static HTML/CSS marketing website for Ice Station Zebra LLC, a challenge coin manufacturing and security consulting business based in Pittsburgh, PA. The site showcases coin products, explains the ordering process, and provides company/founder information.
+**Ice Station Zebra (isz.one)** is a static HTML/CSS marketing website for Ice Station Zebra LLC, a custom challenge coin, pin, and patch maker based in Pittsburgh, PA. The site showcases coin products, explains the ordering process, and provides company/founder information.
 
 ## Repository Structure
 
@@ -14,7 +14,7 @@ isz.one/
 ├── index.html                  # Homepage (hero, featured coins, CTA)
 ├── gallery.html                # Coin image gallery (Squarespace CDN images)
 ├── process.html                # 5-step ordering process, specs table, FAQ
-├── about.html                  # Company info, founder bio (Timothy E. Reed, CPP)
+├── about.html                  # Company info and brand beliefs
 ├── custom-order.html           # Custom order form (Google Forms integration)
 └── CLAUDE.md                   # This file
 ```
