@@ -108,7 +108,7 @@ Each HTML page follows this structure:
 
 ## External Services
 
-- **Shopify Store**: `https://iszactual.myshopify.com/` - E-commerce storefront
+- **Shopify Store**: `https://shop.isz.one/` - E-commerce storefront
 - **Google Forms**: Used for custom order submissions (form ID placeholder: `YOUR_FORM_ID_HERE`)
 - **Squarespace CDN**: Gallery images hosted externally (`images.squarespace-cdn.com`)
 - **LinkedIn**: Company page at `linkedin.com/company/ice-station-zebra-llc`

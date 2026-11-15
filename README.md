@@ -53,7 +53,7 @@ Arctic-hybrid palette, defined as CSS custom properties in `assets/css/style.css
 
 ## External services
 
-- **Shopify** storefront: https://iszactual.myshopify.com (collections linked from the site)
+- **Shopify** storefront: https://shop.isz.one (collections linked from the site)
 - **AI intake agent**: `https://webhook.isz.one/intake/widget`, embedded on `custom-order.html` (creates a HubSpot deal on completion)
 - **LinkedIn**: https://www.linkedin.com/company/ice-station-zebra-llc
 
