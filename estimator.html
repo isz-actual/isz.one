@@ -20,7 +20,7 @@
         width: 100%;
         min-height: 800px;
         border: none;
-        background: #0f1419;
+        background: #16130F;
       }
       @media (max-width: 768px) {
         .estimator-wrapper iframe {
@@ -28,6 +28,12 @@
         }
       }
     </style>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Pricing Estimator - Ice Station Zebra">
+    <meta property="og:description" content="Get an instant pricing estimate for your custom challenge coins. Configure size, quantity, plating, and features to see real-time pricing.">
+    <meta property="og:url" content="https://isz.one/estimator.html">
+    <meta property="og:image" content="https://isz.one/assets/images/featured-fraternal.jpg">
+    <meta name="twitter:card" content="summary_large_image">
   </head>
   <body>
     <!-- Navigation -->
@@ -38,25 +44,22 @@
           <img src="assets/images/logo.svg" alt="Ice Station Zebra" class="logo">
         </a>
       </div>
-      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu"><span></span><span></span><span></span></label>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span><span></span><span></span></label>
       <ul class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="portfolio/index.html" class="nav-link">Work</a></li>
         <li class="nav-dropdown">
-          <a href="index.html#organizations" class="nav-link nav-dropdown-toggle">Coins <span class="caret">&#9662;</span></a>
+          <a href="index.html#organizations" class="nav-link nav-dropdown-toggle">Who We Serve <span class="caret">&#9662;</span></a>
           <ul class="nav-dropdown-menu">
             <li><a href="masonic.html">Masonic &amp; Fraternal</a></li>
             <li><a href="military.html">Military &amp; Veteran</a></li>
             <li><a href="public-safety.html">Police, Fire &amp; EMS</a></li>
           </ul>
         </li>
-        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-        <li><a href="portfolio/index.html" class="nav-link">Portfolio</a></li>
-        <li><a href="process.html" class="nav-link">How It Works</a></li>
-        <li><a href="estimator.html" class="nav-link active">Estimator</a></li>
+        <li><a href="process.html" class="nav-link">Process</a></li>
         <li><a href="about.html" class="nav-link">About</a></li>
         <li><a href="https://shop.isz.one/" class="nav-link" target="_blank" rel="noopener">Shop</a></li>
-        <li><a href="custom-order.html" class="nav-link cta-link">Custom Order</a></li>
+        <li><a href="custom-order.html" class="nav-link cta-link">Get a Quote</a></li>
       </ul>
     </div>
   </nav>
@@ -64,8 +67,10 @@
     <!-- Estimator Embed -->
     <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Challenge Coin Pricing Estimator</h1>
     <div class="estimator-wrapper">
+      <p class="estimator-handoff">Happy with the number? <a href="custom-order.html">Request a firm quote &rarr;</a></p>
       <iframe src="https://estimate.isz.one/estimate" title="Challenge Coin Pricing Estimator" loading="lazy"></iframe>
     </div>
 
-  </body>
+    <a href="custom-order.html" class="mobile-quote-bar">Get a Quote</a>
+</body>
 </html>

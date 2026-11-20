@@ -24,3 +24,60 @@
   .nav-dropdown-menu a{padding:8px 0}
 }
 h1,h2,h3,.hero h1,.section-title{font-family:'Cinzel',Georgia,serif;font-weight:600}.spec,code{font-family:'IBM Plex Mono',monospace}
+
+/* ── Quote path: mobile quote bar, accessible menu toggle, shared helpers ── */
+.nav-toggle{display:block;position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
+.nav-toggle:focus-visible + .nav-toggle-label{outline:2px solid var(--accent-gold);outline-offset:2px}
+@media(min-width:901px){.nav-menu{gap:34px}}
+.mobile-quote-bar{display:none}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hero-estimate{margin:18px 0 0;font-size:15px}
+.hero-estimate a{color:var(--text-muted);text-decoration:none;border-bottom:1px solid var(--border-color);padding-bottom:2px}
+.hero-estimate a:hover{color:var(--accent-gold);border-color:var(--accent-gold)}
+.shop-links{margin:22px 0 0;font-size:15px !important}
+.shop-links a{color:var(--accent-gold);text-decoration:none}
+.shop-links a:hover{text-decoration:underline}
+.estimator-handoff{margin:0;padding:12px 20px;text-align:center;font-size:15px;background:var(--card-bg);border-bottom:1px solid var(--border-color);color:var(--text-muted)}
+.estimator-handoff a{color:var(--accent-gold);font-weight:600;text-decoration:none}
+.not-found{padding:120px 0;text-align:center}
+.not-found-code{font-family:'IBM Plex Mono',monospace;color:var(--accent-gold);letter-spacing:4px;margin-bottom:12px}
+.not-found h1{font-size:44px;margin-bottom:16px;color:var(--text-light)}
+.not-found p{max-width:520px;margin:0 auto 36px}
+@media(max-width:900px){
+  .mobile-quote-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:1200;padding:16px 20px calc(16px + env(safe-area-inset-bottom));background:var(--bright-blue);color:#16130F;text-align:center;font-weight:600;font-size:16px;text-decoration:none;box-shadow:0 -6px 24px rgba(0,0,0,0.45)}
+  .mobile-quote-bar:hover{color:#16130F}
+  body:has(.mobile-quote-bar){padding-bottom:64px}
+  .nav-menu-static{display:flex !important;position:static;flex-direction:row;background:none;border:none;padding:0;gap:18px}
+  .nav-menu-static > li{width:auto}
+}
+@media(max-width:768px){
+  .two-col{grid-template-columns:1fr;gap:24px}
+  .not-found h1{font-size:30px}
+}
+
+/* ── Quote forms ── */
+.quote-form{max-width:800px;margin:0 auto;padding:32px;background:var(--card-bg);border:1px solid var(--border-color);border-radius:6px;text-align:left;display:grid;gap:18px}
+.quote-form-short{max-width:560px}
+.quote-form-row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.quote-form-row-3{grid-template-columns:1.2fr 1fr 1fr}
+.quote-form label{display:grid;gap:8px;font-size:14px;font-weight:500;color:var(--text-light)}
+.quote-form input,.quote-form select,.quote-form textarea{width:100%;padding:13px 14px;font:inherit;font-size:16px;font-weight:400;color:var(--text-light);background:var(--dark-bg);border:1px solid var(--border-color);border-radius:4px;transition:var(--transition);color-scheme:dark}
+.quote-form textarea{resize:vertical;min-height:96px}
+.quote-form input::placeholder,.quote-form textarea::placeholder{color:#6F6B64}
+.quote-form input:focus,.quote-form select:focus,.quote-form textarea:focus{outline:none;border-color:var(--accent-gold);box-shadow:0 0 0 3px rgba(180,140,78,0.25)}
+.quote-form button{width:100%;font-family:inherit}
+.quote-form button:disabled{opacity:0.6;cursor:wait;transform:none}
+.quote-form-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.quote-form-status{margin:0;font-size:14px;min-height:0;color:var(--text-muted)}
+.quote-form-status.is-error{color:#E08A6E}
+.quote-form-status:empty{display:none}
+.quote-form .quote-form-note,.cta-section .quote-form .quote-form-note{margin:0;font-size:13px;color:var(--text-muted);text-align:center}
+.quote-form-success{max-width:560px;margin:0 auto;padding:36px 32px;background:var(--card-bg);border:1px solid var(--accent-gold);border-radius:6px;text-align:center}
+.quote-form-success h3{color:var(--accent-gold);margin-bottom:12px}
+.quote-form-success p,.cta-section .quote-form-success p{margin:0;font-size:16px;color:var(--text-light)}
+.quote-alt-heading{text-align:center;margin:70px 0 14px;font-size:30px}
+@media(max-width:768px){
+  .quote-form{padding:22px 18px}
+  .quote-form-row,.quote-form-row-3{grid-template-columns:1fr}
+  .quote-alt-heading{font-size:24px;margin-top:50px}
+}
