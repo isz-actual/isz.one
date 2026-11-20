@@ -242,11 +242,22 @@
     </div>
   </section>
 
-  <section class="cta-section">
+  <section class="cta-section" id="quote">
     <div class="container">
       <h2>Commission Regalia for Your Lodge</h2>
       <p>Tell us about your project. We respond within 24 hours with a detailed quote.</p>
-      <a href="custom-order.html" class="btn btn-primary btn-large">Request a Quote</a>
+      <form class="quote-form quote-form-short" data-quote-form data-source="isz.one Masonic page" novalidate>
+        <div class="quote-form-row">
+          <label for="m-first">First name<input id="m-first" type="text" name="firstname" autocomplete="given-name" required></label>
+          <label for="m-last">Last name<input id="m-last" type="text" name="lastname" autocomplete="family-name" required></label>
+        </div>
+        <label for="m-email">Email<input id="m-email" type="email" name="email" autocomplete="email" required></label>
+        <label for="m-notes">What do you need?<textarea id="m-notes" name="quote_customer_notes" rows="3" placeholder="Product, rough quantity, and when you need it"></textarea></label>
+        <div class="quote-form-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" class="btn btn-primary btn-large">Get My Quote</button>
+        <p class="quote-form-status" role="alert"></p>
+        <p class="quote-form-note">We reply within 24 hours. 100 piece minimum. No mold or setup fees.</p>
+      </form>
     </div>
   </section>
 
@@ -328,5 +339,6 @@
   }
   </script>
   <a href="custom-order.html" class="mobile-quote-bar">Get a Quote</a>
+  <script src="assets/js/quote-form.js" defer></script>
 </body>
 </html>

@@ -46,18 +46,46 @@
   <section class="hero" style="padding: 40px 0;">
     <div class="container">
       <h1>Request Your Custom Quote</h1>
-      <p class="hero-description">Tell us about your vision. We'll provide a detailed quote, timeline, and next steps within 24 hours.</p>
+      <p class="hero-description">Tell us what you need. We reply within 24 hours with a detailed quote, timeline, and next steps.</p>
     </div>
   </section>
 
   <section id="intake" style="padding: 40px 0 60px;">
     <div class="container">
       <div style="max-width: 800px; margin: 0 auto;">
-                <p style="text-align: center; margin-bottom: 40px; font-size: 18px;">Chat with our intake assistant below for a real-time preliminary estimate. Upload your artwork, answer a few questions, and we follow up within 24 hours.</p>
+                <form class="quote-form" data-quote-form data-source="isz.one quote page" novalidate>
+          <div class="quote-form-row">
+            <label for="q-first">First name<input id="q-first" type="text" name="firstname" autocomplete="given-name" required></label>
+            <label for="q-last">Last name<input id="q-last" type="text" name="lastname" autocomplete="family-name" required></label>
+          </div>
+          <div class="quote-form-row">
+            <label for="q-email">Email<input id="q-email" type="email" name="email" autocomplete="email" required></label>
+            <label for="q-company">Organization<input id="q-company" type="text" name="company" autocomplete="organization" placeholder="Lodge, unit, department, or company"></label>
+          </div>
+          <div class="quote-form-row quote-form-row-3">
+            <label for="q-type">Product
+              <select id="q-type" name="quote_product_type">
+                <option value="Coin">Challenge coin</option>
+                <option value="Pin">Lapel pin</option>
+                <option value="Patch">Patch</option>
+                <option value="Other">Something else</option>
+              </select>
+            </label>
+            <label for="q-qty">Quantity<input id="q-qty" type="number" name="quote_quantity" min="100" step="1" inputmode="numeric" placeholder="100 minimum"></label>
+            <label for="q-date">Need it by<input id="q-date" type="date" name="quote_delivery_date"></label>
+          </div>
+          <label for="q-notes">Tell us about the design<textarea id="q-notes" name="quote_customer_notes" rows="4" placeholder="What it marks, wording, colors, anything you already have in mind"></textarea></label>
+          <div class="quote-form-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+          <button type="submit" class="btn btn-primary btn-large">Get My Quote</button>
+          <p class="quote-form-status" role="alert"></p>
+          <p class="quote-form-note">We reply within 24 hours. No mold or setup fees. Have artwork? Send it when we reply, or upload it in the chat below.</p>
+        </form>
+        <h2 class="quote-alt-heading" id="chat">Prefer to talk it through?</h2>
+        <p style="text-align: center; margin-bottom: 30px;">Chat with our intake assistant for a real-time preliminary estimate. You can upload artwork there too.</p>
         <div style="background: var(--card-bg); padding: 16px; border-radius: 4px; border: 1px solid var(--border-color);">
           <iframe id="isz-intake" src="https://webhook.isz.one/intake/widget" title="Ice Station Zebra custom order intake" loading="lazy" style="width: 100%; height: 720px; border: none; border-radius: 4px; display: block;"></iframe>
         </div>
-        <p style="font-size: 14px; color: var(--text-muted); text-align: center; margin-top: 16px;">Prefer not to chat? Email your details to <a href="mailto:sales@isz.one">sales@isz.one</a> and we respond within 24 hours. Want a ballpark first? <a href="estimator.html">Use the price estimator</a>.</p>
+        <p style="font-size: 14px; color: var(--text-muted); text-align: center; margin-top: 16px;">Or email your details to <a href="mailto:sales@isz.one">sales@isz.one</a> and we respond within 24 hours. Want a ballpark first? <a href="estimator.html">Use the price estimator</a>.</p>
         <div style="margin-top: 60px;">
           <h3>What To Include In Your Request:</h3>
           <div class="two-col">
@@ -180,5 +208,6 @@
       }
     });
   </script>
+  <script src="assets/js/quote-form.js" defer></script>
 </body>
 </html>

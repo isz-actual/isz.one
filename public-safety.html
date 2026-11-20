@@ -181,11 +181,22 @@
     </div>
   </section>
 
-  <section class="cta-section">
+  <section class="cta-section" id="quote">
     <div class="container">
       <h2>Commission Coins for Your Department</h2>
       <p>Tell us about your project. We respond within 24 hours with a detailed quote.</p>
-      <a href="custom-order.html" class="btn btn-primary btn-large">Request a Quote</a>
+      <form class="quote-form quote-form-short" data-quote-form data-source="isz.one Public Safety page" novalidate>
+        <div class="quote-form-row">
+          <label for="ps-first">First name<input id="ps-first" type="text" name="firstname" autocomplete="given-name" required></label>
+          <label for="ps-last">Last name<input id="ps-last" type="text" name="lastname" autocomplete="family-name" required></label>
+        </div>
+        <label for="ps-email">Email<input id="ps-email" type="email" name="email" autocomplete="email" required></label>
+        <label for="ps-notes">What do you need?<textarea id="ps-notes" name="quote_customer_notes" rows="3" placeholder="Product, rough quantity, and when you need it"></textarea></label>
+        <div class="quote-form-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button type="submit" class="btn btn-primary btn-large">Get My Quote</button>
+        <p class="quote-form-status" role="alert"></p>
+        <p class="quote-form-note">We reply within 24 hours. 100 piece minimum. No mold or setup fees.</p>
+      </form>
     </div>
   </section>
 
@@ -247,5 +258,6 @@
   }
   </script>
   <a href="custom-order.html" class="mobile-quote-bar">Get a Quote</a>
+  <script src="assets/js/quote-form.js" defer></script>
 </body>
 </html>
